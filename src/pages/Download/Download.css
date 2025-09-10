@@ -1,0 +1,208 @@
+/* 确保所有父级都有高度 */
+html, body, #root {  /* 根据你的项目结构调整选择器 */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  height: 100%;
+}
+
+.Dowload{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background: 50% / cover url(../../common/images/screen4Bg.jpg) no-repeat;
+}
+
+.Dowload .galleryIcon{
+    width: 13.1875rem;
+    height: 6.3125rem;
+    position: absolute;
+    left: 2.51875rem;
+    top: 3.275rem;
+    background: url(../../common/images/Download/gallery.png) 50% center / contain no-repeat;
+}
+
+
+.Dowload .galleryIcon-content{
+    position: absolute;
+    opacity: 1;
+    transition: all 1s;
+    display: flex;
+    top: 20%;
+    left: 7%;
+}
+
+.itemBox .item-content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itemBox .cover{
+    position: absolute;
+    border-radius: 4.75rem 0 3.5rem;
+    object-fit: cover;
+}
+.itemBox .title{
+    position: absolute;
+    bottom: 1.875rem;
+    left: -1.75rem;
+}
+.itemBox .active{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -2rem;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.itemBox .item-content:hover .active {
+    display: block;
+    opacity: 1;
+}
+.itemBox .more{
+    width: 9rem;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+}
+.itemBox .item-content:hover .more {
+    display: block;
+    opacity: 1;
+}
+
+.itemBox .item-content:hover .videoplay{
+    position: relative;
+    top: 13rem;
+    left: 25rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    z-index: 10;
+}
+
+.itemBox  .imgplay{
+    position: relative;
+    top: 13rem;
+    left: 26rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    z-index: 10;
+}
+
+.box-videobox{
+    margin-right: 3rem;
+}
+.box-videobox .item-content{
+    width: 38.9rem;
+    height: 23.2rem;
+    background: url(../../common/images/Download/video-back.png) 50% / 100% 100%;
+}
+.box-videobox .pop{
+    position: absolute;
+    width: 93%;
+    height: 90%;
+    bottom: 1rem;
+    left: .2875rem;
+}
+.box-videobox .cover{
+    width: 90%;
+    height: 85%;
+    bottom: 1.6rem;
+    left: 0.8rem;
+}
+.box-videobox .title{
+    width: 10rem;
+    height: 5.5rem;
+}
+.box-videobox .more{
+    bottom: 1.125rem;
+    right: .75rem;
+}
+
+
+.Dowload .line{
+    margin-bottom: 3rem;
+    width: 1rem;
+    height: .71875rem;
+}
+.box-imgbox .item-content{
+    top: 2rem;
+    width: 37.9rem;
+    height: 24.2rem;
+    background: url(../../common/images/Download/img-back.png) 50% / 100% 100%;
+}
+.box-imgbox .pop{
+    position: absolute;
+    width: 97%;
+    height: 87%;
+    bottom: 2rem;
+    left: .2875rem;
+}
+.box-imgbox .cover{
+    width: 93%;
+    height: 80%;
+    bottom: 2.8rem;
+    left: 1rem;
+}
+.box-imgbox .title{
+    width: 17rem;
+    height: 6.5rem;
+    left: -1.5625rem;
+}
+.box-imgbox .active{
+    left: 0rem;
+    bottom: 1rem;
+}
+.box-imgbox .more{
+    bottom: 1.8125rem;
+    right: -.375rem;
+}
+
+.Dowload .galleryIcon-content .box-MMDbox{
+    position: absolute;
+    bottom: -3rem;
+    left: 8rem;
+    width: auto;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Dowload .galleryIcon-content .box-MMDbox .coverMMD{
+    width: 18rem;
+    height: 6rem;
+    background: 50% / contain url(../../common/images/Download/cover-mmd.png) no-repeat;
+}
+.Dowload .galleryIcon-content .box-MMDbox .MMD{
+    width: 10rem;
+    height: 100%;
+    margin-top: .9375rem;
+    margin-left: .125rem;
+    cursor: pointer;
+    background: 50% / contain url(../../common/images/Download/mmd-btn.png) no-repeat;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .character-content {
+    flex-direction: column;
+  }
+  
+  .video-frame {
+    height: 40%;
+  }
+  
+  .swiper-box {
+    padding: 15px;
+  }
+  
+  .slide-title {
+    font-size: 20px;
+  }
+}

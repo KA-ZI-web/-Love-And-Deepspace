@@ -1,0 +1,322 @@
+
+/* 容器样式 */
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 100vh; /* 全屏高度 */
+
+}
+.swiper-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.hero-banner .swiper {
+  width: 100%;
+  height: 100vh;
+
+}
+/* 强制横向滑动 */
+.hero-banner .swiper-wrapper {
+  display: flex ;
+  flex-direction: row ;
+  width: 100vw ; /* 关键：禁止换行 */
+  height: 100vh;
+}
+.hero-banner .swiper-slide:not(.swiper-slide-active){
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+.hero-banner .swiper-slide {
+  opacity: 1;
+  transition: opacity 1.5s;
+  width: 100%;  /* 单张幻灯片占满容器 */
+  height: 100%;
+  flex-shrink: 0; /* 禁止压缩 */
+}
+
+
+/* 视频容器样式 */
+.video-slide {
+  position: relative;/* 为子元素提供定位基准 */
+  width: 100%;
+  height: 100%;
+}
+/* 视频背景 */
+.video-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+
+/* 视频遮罩 */
+.hero-banner .line{
+  background: #fff;
+  opacity: .2;
+  position: absolute;
+  z-index: 10;
+}
+.line-left{
+  width: 0.03125rem;
+  height: 100%;
+  left: 6.5625rem;
+}
+.line-right{
+  width: .0625rem;
+  height: 100%;
+  right: 6.5625rem;
+}
+.line-bottom {
+  width: 100%;
+  height: .0625rem;
+  bottom: 7rem;
+  left: 4.9375rem;
+}
+
+
+/*图文样式*/
+.overlay-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.character-img {
+  position: absolute;
+  left: 75%;
+  top: 88%;
+  height: 10%;
+  right: 5%;
+  bottom: 0;
+  filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+}
+
+.hero-banner .swiper-slide:not(.swiper-slide-active){
+  .text-content{
+    color: #000000;
+    opacity: 0;
+    transition: all 1.5s .2s;
+  }
+}
+
+
+/* 文字内容 */
+.hero-banner .swiper-slide-active .text-content {
+  position: absolute;
+  transition: all 1.5s .2s;
+  left: 8%;
+  top: 55%;
+  width: 30%;
+  height: 40%;
+  z-index: 4;
+  color: white;
+  transform: translateY(30px);
+  font-size: clamp(14px, 2vw, 18px);
+  font-family: 'Noto Serif SC', serif;
+}
+
+.text-content .videoplay {
+  position: absolute;
+  left: 30%;
+  top: 15px;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.text-content .title {
+  width: 35%;
+  font-size: clamp(24px, 5vw, 48px);/* 最小值24px，理想值5vw，最大值48px */
+  margin-bottom: clamp(8px, 1vw, 16px);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+.text-content .subtitle {
+  font-size: clamp(16px, 3vw, 24px);
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  transition: all .5s ease-in-out .4s;
+}
+
+/* 详情项 */
+.details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  transition: all .4s ease-in-out .6s;
+}
+
+.detail-item {
+  display: flex;
+  width: 100px;
+  height: 30px;
+  align-items: center;
+  white-space: nowrap; /* 防止文字换行 */
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+.detail-item span{
+text-shadow: 3px 3px 6px rgba(98, 28, 145, 0.9);
+}
+
+.detail-icon {
+  width: 80%;
+  margin-right: 10px;
+}
+
+/* 装饰文本 */
+.decoration {
+  width: 6rem;
+  height: 100%;
+  bottom: 0;
+  position: absolute;
+  z-index: 10;
+  background: 50% / cover url(../../common/images/HeroBanner/deepspace.png) no-repeat;
+}
+
+
+/*动画设置*/
+/*标题动画设置*/
+
+.slide-1 .text-content .title:hover {
+color: #82c3e3;
+}
+.slide-1 .text-content .subtitle:hover::after{
+background: #82c3e3;
+}
+
+.slide-2 .text-content .title:hover {
+color: #d1a8ef;
+}
+.slide-2 .text-content .subtitle:hover::after{
+background: #d1a8ef;
+}
+
+.slide-3 .text-content .title:hover {
+color: #a8efc9;
+}
+.slide-3 .text-content .subtitle:hover::after{
+background: #a8efc9;
+}
+
+.slide-4 .text-content .title:hover {
+color: #e5efa8;
+}
+.slide-4 .text-content .subtitle:hover::after{
+background: #e5efa8;
+}
+
+.text-content .title:hover ,
+.text-content .subtitle:hover{
+  transform: scale(1.05); /* 轻微放大 */
+  color: #ffffff;        /* 变色 */
+  transition: all 0.3s ease; /* 平滑过渡 */
+}
+/*副标题动画设置*/
+.text-content .subtitle {
+  position: relative;
+}
+
+.text-content .subtitle:hover::after
+{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #844f9f;
+  animation: underline 0.3s forwards;
+}
+
+@keyframes underline {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+/* 自定义导航按钮 */
+.hero-banner .swiper-button-next, 
+.hero-banner .swiper-button-prev {
+  pointer-events: auto;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 90%;
+  z-index: 100;
+  border-radius: 50%;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.hero-banner .swiper-button-next:after,
+.hero-banner .swiper-button-prev:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border-top: 5px solid white;
+  border-right: 5px solid white;
+}
+.hero-banner .swiper-button-next:after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.hero-banner .swiper-button-prev:after {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+.hero-banner .swiper-button-next:hover,
+.hero-banner .swiper-button-prev:hover {
+  scale: 1.5;
+  background: rgba(255, 255, 255, 0.2);
+}
+.hero-banner .swiper-button-next{
+  left: 58rem;
+}
+.hero-banner .swiper-button-prev{
+  left: 35rem;
+}
+/* 分页器样式 虚实线切换*/
+.hero-banner .swiper-pagination {
+  position: absolute;
+  top: 92.5% ;
+  left: 41.5%;
+  width: 18rem ; /* 控制总长度 */
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  height: 5px; /* 虚线高度 */
+}
+
+.hero-banner .swiper-pagination-bullet {
+   flex: 1; /* 均分宽度 */
+  height: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    white 0,
+    white 50%, /* 实线部分 */
+    transparent 50%,
+    transparent 100%
+  );
+  background-size: 6px 100%; /* 虚线间隔 */
+  opacity: 0.333;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);/*拖尾动效*/
+  margin: 0 2px;
+  border-radius: 2px;
+}
+
+.hero-banner .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: linear-gradient(to right, rgb(197, 178, 178), rgb(255, 255, 255)) !important; /* 实线 */
+  background-size: 100% 100% ;
+  animation: dashProgress 3s linear forwards;
+  transform-origin: left center;
+}

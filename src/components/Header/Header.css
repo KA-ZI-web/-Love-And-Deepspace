@@ -1,0 +1,81 @@
+.M-header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+}
+.M-header::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    background: 50% / cover url(../../common/images/nav.png) no-repeat;
+    z-index: -1;
+}
+.M-header-content{
+    position: relative;
+    top: -.625rem;
+    display: flex;
+    width: 60%;
+    height: 75%;
+    justify-content: space-around;
+}
+.M-header-em{
+    width: 19rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0; 
+}
+.M-header-em.active {
+    height: 4rem;
+    background: 50% / cover url(../../common/images/active.png) no-repeat; 
+    transform: translateY(-3px);
+}
+.M-header-em.active::before{
+    content: "";
+    width: .625rem;
+    height: .625rem;
+    background: #fff;
+    position: absolute;
+    bottom: -.235rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+.M-header-em.active::after{
+    content: "";
+    width: 100%;
+    height: .1625rem;
+    background: #edcab6;
+    position: absolute;
+    bottom: .01563rem;
+    left: 0;
+}
+
+
+.M-header span{
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.M-header p {
+    font-size: .5rem;
+    color:#fff;
+    opacity: .6;
+    letter-spacing: .275rem;
+    margin-top: .00313rem;
+}

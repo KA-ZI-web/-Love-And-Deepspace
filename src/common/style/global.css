@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url(../fonts/ResourceHanRoundedCN-Bold.ttf) format('ttf');
+    src: url(../fonts/AlimamaFangYuanTiVF-Thin.woff) format('woff');
+    src: url(../fonts/AlimamaFangYuanTiVF-Thin.woff2) format('woff2');
+    font-style: normal;
+    font-weight: normal;
+}
+/* 在全局样式文件中添加 */
+.swiper {
+  width: 100%;
+  height: 100% !important; /* 强制高度 */
+  z-index: 1;
+}
+
+.swiper-wrapper {
+  height: 100% !important;
+}
+
+.swiper-slide {
+  height: 100% !important;
+  z-index: 1;
+}
+
+
+/* 确保所有父级都有高度 */
+html, body, #root {  /* 根据你的项目结构调整选择器 */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  height: 100%;
+}
