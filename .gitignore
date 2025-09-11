@@ -18,6 +18,11 @@ build/
 logs/
 *.log
 
+
+# 视频
+src/common/video
+
+
 # 编辑器配置文件
 .vscode/
 *.code-workspace

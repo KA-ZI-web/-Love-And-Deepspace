@@ -1,0 +1,67 @@
+/* styles/video-modal.css */
+
+
+
+.img-overlay,
+.video-modal-overlay {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+
+.img-content,
+.video-modal-content {
+  position: relative;
+  width: auto;
+  height: auto;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.img-element,
+.video-element {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.close-button {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 100;
+}
+
+.video-play-button {
+    position: absolute;
+    top: 3%;
+    left: 20%; 
+    display: inline-flex;
+    transition: transform 0.2s ease;
+}
+
+.video-play-button:hover {
+  transform: scale(1.1);
+}
+
+
+.VideoButton{
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+}
