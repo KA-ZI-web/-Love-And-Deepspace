@@ -15,6 +15,7 @@ import Home from "./pages/Home"
 import HeroBanner from "./pages/HeroBanner"
 import Character from "./pages/CharacterCard"
 import Download from "./pages/Download"
+import music from "./common/audio/music.mp3"
 
 // 页面数据配置 - 与Header菜单项对应
 const pageData = [
@@ -59,7 +60,7 @@ const handleClickRef = useRef(() => {
 
   const initAudio=async() => {
     try{
-      audioManager.init('/银瀑奏鸣.mp3');
+      audioManager.init(music);
     }catch(error:any){
       if(error.message.startsWith("AUDIO_AUTOPLAY_BLOCKED")){
         console.log("自动播放被拦截，等待用户点击...");
