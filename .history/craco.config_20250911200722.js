@@ -12,12 +12,7 @@ module.exports = {
       extensions: ['.tsx', '.ts', '.jsx', '.js', '.json']
     },
 
-    configure: {
-      output: {
-        publicPath: '/-Love-And-Deepspace/',
-      },
-    },
-    
+
     configure: (webpackConfig) => {
       // 修复 CSS 加载器配置
       webpackConfig.module.rules.forEach(rule => {
