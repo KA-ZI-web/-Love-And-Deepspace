@@ -1,3 +1,4 @@
+
 class AudioManager {
   private audio: HTMLAudioElement | null = null;
   private isMuted = false;

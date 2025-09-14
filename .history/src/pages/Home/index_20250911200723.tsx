@@ -1,6 +1,8 @@
+
 import Side from '../../components/Side/Side';
 import './Home.css'
 
+//资源引入
 import video from '../../common/video/piano.mp4';
 import codeTextImg from '../../common/images/Home/codetext.png';
 import codeImg from '../../common/images/Home/code.png';

@@ -15,8 +15,10 @@ const VideoModal= ({ videoSrc, isOpen, onClose }:VideoModalProps) => {
   // 弹窗打开时静音背景音乐，关闭时恢复
   useEffect(() => {
     if (isOpen) {
+      // 打开弹窗时静音背景音乐
       audioManager.mute();
     } else {
+      // 关闭弹窗时恢复背景音乐
       audioManager.unmute();
     }
   }, [isOpen]);
@@ -25,7 +27,10 @@ const VideoModal= ({ videoSrc, isOpen, onClose }:VideoModalProps) => {
   useEffect (() => {
     const video = videoRef.current;
     if (!video) return;
+
     const handleVolumeChange = () => setIsMuted(video.muted);
+
+
     video.addEventListener('volumechange', handleVolumeChange);
    
     return() => {
@@ -35,9 +40,8 @@ const VideoModal= ({ videoSrc, isOpen, onClose }:VideoModalProps) => {
   // 处理自动播放逻辑
     useEffect(() => {
         if (!isOpen) return;
-        
-        const video = videoRef.current;
 
+        const video = videoRef.current;
         if (!video) return;
 
         // 当模态框打开时尝试播放

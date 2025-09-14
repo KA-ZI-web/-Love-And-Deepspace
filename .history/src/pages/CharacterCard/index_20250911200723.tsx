@@ -1,3 +1,4 @@
+
 import { useState,useRef,useEffect } from 'react';
 import Side from '../../components/Side/Side';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -5,10 +6,10 @@ import {Parallax, Navigation, Pagination } from 'swiper/modules';
 import VideoModal from '../../components/Video/Video';
 import type { Swiper as SwiperType } from 'swiper';
 
-import 'swiper/css'; 
+import 'swiper/css'; // 核心样式
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import './Card.css';
+import './Card.css'; //添加单独的样式文件
 
 import video1 from '../../common/video/pv/国王.mp4';
 import video2 from '../../common/video/pv/聆花意.mp4';
@@ -18,18 +19,18 @@ import video5 from '../../common/video/pv/毛绒攻势.mp4';
 import video6 from '../../common/video/pv/远航.mp4';
 
 
+
 interface CharacterItem{
     id: number;
     title : string; 
     videoSrc : string;
-    details : {            
+    details : {            // 详情项
         text: string;       
     }[];
 }
 
 
 const Character = () => {
-    //匹配项，导入相应资源
     const characterItems : CharacterItem[] = [
         {
             id:  1 ,
@@ -99,13 +100,13 @@ const Character = () => {
         },
         
     ];
+
     
     const [currentVideo,setCurrentVideo]=useState(null);
     const swiperRef = useRef(null);
-
-    //设置鼠标跟随事件
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const containerRef = useRef(null);
+    
     const myStyle: { [key: string]: string | number } = {
         '--mouse-x': mousePosition.x,
         '--mouse-y': mousePosition.y
@@ -141,6 +142,8 @@ const Character = () => {
   console.log('Position updated:', mousePosition);
 }, [mousePosition]);
 
+
+    
 
     return (
         <div className='character-card'>

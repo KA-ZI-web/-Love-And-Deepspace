@@ -1,3 +1,4 @@
+
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -41,6 +42,7 @@ const handleClickRef = useRef(() => {
 
   useEffect(() => {
     console.log("事件绑定逻辑")
+    
     const handleClick = handleClickRef.current;
     
     console.log("准备绑定事件，回调函数：",handleClick)
@@ -54,6 +56,8 @@ const handleClickRef = useRef(() => {
     }
   }, []);
   //使用audioManager逻辑，避免直接对Dom进行操作
+  
+
   const initAudio=async() => {
     try{
       audioManager.init(music);
