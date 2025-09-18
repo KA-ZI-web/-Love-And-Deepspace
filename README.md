@@ -8,7 +8,7 @@
 ## 项目简介
 一个基于 React 的游戏角色（沈星回）交互式展示页，包含首页，角色介绍，特色玩法等模块。
 ### 项目效果:
-
+<video src="./public/DeepSpace演示视频.mp4" autoplay="true" controls="controls" width="800" height="600"></video>
 ----------------------------------------------
 ## 技术栈
 ### 核心前端框架
