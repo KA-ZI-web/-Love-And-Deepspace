@@ -8,8 +8,8 @@
 ## 项目简介
 一个基于 React 的游戏角色（沈星回）交互式展示页，包含首页，角色介绍，特色玩法等模块。
 ### 项目效果:
-暂时先把最终呈现效果放到了微博上
-<video src="http://t.cn/AXhoAGUT" autoplay="true" controls="controls" width="800" height="600"></video>
+    暂时先把最终呈现效果放到了微博上
+<iframe width="100%" height="468" src="http://t.cn/AXhoAGUT" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 ----------------------------------------------
 ## 技术栈
 ### 核心前端框架
